@@ -1,0 +1,210 @@
+<resources>
+    <string name="app_name">FindusonWeb</string>
+    <string name="loading">Loading…</string>
+    <string name="check_internet">Please check your internet connection.</string>
+    <string name="enter_password">Please enter password</string>
+    <string name="valid_email">Please enter valid email.</string>
+    <string name="enter_email">EMAIL</string>
+    <string name="username">USERNAME</string>
+    <string name="login">LOGIN</string>
+    <string name="password">PASSWORD</string>
+    <string name="tagline">\" Connect and get involved to grow your business locally \"</string>
+    <string name="tabline_second">Looking for Local Businesses ?</string>
+    <string name="forget_password">I forgot my password ! </string>
+    <string name="not_yet_member">NOT A MEMBER ?</string>
+    <string name="tag3">Increase your online presence at no cost.</string>
+    <string name="register"><u>REGISTER</u></string>
+    <string name="country">COUNTRY</string>
+    <string name="button_Register">REGISTER</string>
+    <string name="cancel">Cancel</string>
+    <string name="submit_job">Submit</string>
+    <string name="requirement_title">Requirement Title</string>
+    <string name="search_job_type">Search Job Type/Business</string>
+    <string name="search_product">Search Product and Service </string>
+    <string name="enter_business_name">Please enter business name</string>
+    <string name="about_us">About Us</string>
+    <string name="post_a_requirement">Post a requirement to findusonweb community</string>
+    <string name="decription">Description</string>
+    <string name="service_detail">Our online channel focuses on providing a platform to SMEs, large enterprises as well as individuals proving many features including but not limited to gives you the names, addresses and telephone numbers of over thousands of </string>
+    <string name="search_postcode">Search By Postcode</string>
+    <string name="browse">BROWSE</string>
+    <string name="search_button">SEARCH</string>
+    <string name="are_you_member">ARE YOU A MEMBER ?</string>
+    <string name="post_job_free">Post a Job for FREE </string>
+    <string name="get_free_quote">Get Free Quotes &#032; &#032;&#032; &amp; offers </string>
+    <string name="refer_and_invite">Refer and Invite a Friend</string>
+    <string name="firstname">FIRST NAME</string>
+    <string name="lastname">LAST NAME </string>
+    <string name="email">EMAIL</string>
+    <string name="businee_name">Business Name</string>
+    <string name="phone">PHONE</string>
+    <string name="submit">SUBMIT</string>
+    <string name="login_register"><u>LOGIN</u></string>
+    <string name="repeat_email">REPEAT EMAIL</string>
+    <string name="repeat_pass">REPEAT PASSWORD</string>
+    <string name="business_name">BUSINESS NAME</string>
+    <string name="owner_first_name">OWNER FIRST NAME</string>
+    <string name="owner_last_name">OWNER LAST NAME</string>
+    <!--Browse job-->
+    <string name="requirement_request">Requirement Request</string>
+    <string name="post_req">Post Requirement</string>
+    <string name="browse_product">Browse Products/Services</string>
+    <string name="browse_location">Browse Location</string>
+    <string name="browse_category">Browse Categories</string>
+    <string name="browse_job">Browse Jobs</string>
+    <string name="type_your_msg">Type your message</string>
+    <string name="send">Send</string>
+    <string name="review">Review</string>
+    <string name="title">Title</string>
+    <string name="rating">Rating :</string>
+    <string name="features_rating">Features Rating :</string>
+    <string name="performance_rating">Performance Rating :</string>
+    <string name="reliability_rating">Reliability Rating :</string>
+    <string name="value_rating">Value Rating :</string>
+    <string name="submit_review">Submit</string>
+    <string name="primary_category">Primary Category</string>
+    <string name="category"> Category *</string>
+    <string name="Iterations"> Number of Iterations</string>
+    <string name="comment"> Comment </string>
+    <string name="suggest_a_change"> Suggest a Change </string>
+
+    <string name="select_option">Select Option</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="choose_from_gallery">Choose From Gallery</string>
+    <string name="plz_wait">Please wait....</string>
+    <string name="camera_permission_error">Camera Permission error</string>
+    <string name="Your_rating_reviews_are_successfully_submitted.">Your rating and reviews are successfully submitted.</string>
+    <string name="Rating_Review_Error">Rating and Review Error</string>
+    <string name="Rating_And_Review_Already_Done">Rating and Review Already Done</string>
+    <string name="Enter_your_review">Enter your review</string>
+    <string name="Put_rate">Put rate</string>
+    <string name="Write_your_reviews">Write your reviews</string>
+    <!--Browse Product-->
+    <string name="search_with_name">Search with name</string>
+    <string name="search_with_cat">Search with Category</string>
+    <string name="search_with_description">Search with description</string>
+    <string name="search_with_keyword">Search with keyword</string>
+
+    <!-- Add Product -->
+    <string name="classified">Classified</string>
+    <string name="price">Price</string>
+    <string name="expiry_date">Expiration Date</string>
+    <!--Edit Profile-->
+    <string name="profile_pic_updated">Your profile picture has been updated.</string>
+    <string name="profile_updated">Your profile  has been updated.</string>
+    <string name="logout">Logout</string>
+    <string name="add_phone_number">Add Phone Number</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="change_profile_pic">Change Profile Picture</string>
+    <string name="edit">Edit</string>
+    <string name="change_password">Change Password</string>
+    <!--Job Details-->
+    <string name="send_proposal">Send Proposal</string>
+    <!--Invite Friend-->
+    <string name="referral_code">REFERRAL SOURCE</string>
+    <!-- Register-->
+    <string name="sign_up">Sign Up</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+
+    <string name="confirm_password">Confirm Password</string>
+    <string name="mobile">Mobile</string>
+    <string name="todo">To-Dos</string>
+
+    <string name="email_mismatch">Email mismatch</string>
+    <string name="password_mismatch">Password mismatch.</string>
+    <string name="minimum_length">Minimum password length is 6.</string>
+    <string name="enter_mobile">Please enter mobile number.</string>
+    <string name="enter_campaign_id">Enter campaign ID</string>
+
+    <string name="enter_confirm_password">Please enter confirm password.</string>
+    <string name="enter_pin">Please Enter pin code</string>
+    <string name="enter_last_name">Please enter last name.</string>
+    <string name="enter_first_name">Please enter first name.</string>
+    <string name="enter_user_name">Please enter username</string>
+
+    <string name="already_registered">You are already registered.</string>
+    <string name="registration_successful">Registration successful.</string>
+
+
+    <string name="login_successful">Login successful.</string>
+    <string name="password_incorrect">Password incorrect.</string>
+    <string name="something_went_wrong">Something went wrong!!</string>
+
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="signin_via">Sign in using social account.</string>
+    <string name="not_registered">You are not registered.</string>
+
+    <!--App bar-->
+    <string name="action_settings">Setting</string>
+
+    <string name="id">ID</string>
+    <string name="product">Product</string>
+    <string name="product_name">Product name</string>
+    <string name="listing_name">Listing name</string>
+
+    <string name="image">Image</string>
+    <string name="action">Action</string>
+    <!-- Dashboard-->
+    <string name="dashboard">Dashborad</string>
+    <string name="product_services">Product/Services</string>
+    <string name="my_order">My Order</string>
+    <string name="manage_request">Manage Request</string>
+    <string name="message">My Message</string>
+    <!--Recommend Business-->
+    <string name="recommend">Recommend A Business</string>
+    <string name="claimbusiness">Claim your Business</string>
+    <string name="listingname">Listing Name</string>
+
+    <!--Proposal Screen-->
+    <string name="proposal">Proposal</string>
+    <string name="post_job">Post Job</string>
+    <string name="date">Date</string>
+    <string name="request">Request</string>
+    <string name="manage">Manage</string>
+    <string-array name="spinnerItems">
+        <item>Pause</item>
+        <item>Delete</item>
+
+    </string-array>
+    <string-array name="Member_names">
+        <item>Pavan D</item>
+        <item>DayaSagar</item>
+        <item>Pavan B</item>
+        <item>Maddy</item>
+        <item>Pavan H</item>
+        <item>Nikhil</item>
+    </string-array>
+
+    <!-- Pictures -->
+    <array name="profile_pics">
+        <item>@mipmap/pavand_pic</item>
+        <item>@mipmap/daya_pic</item>
+        <item>@mipmap/pavanb_pic</item>
+        <item>@mipmap/maddy_pic</item>
+        <item>@mipmap/pavanh_pic</item>
+        <item>@mipmap/nikhil_pic</item>
+    </array>
+
+    <!-- Status -->
+    <string-array name="statues">
+        <item>Blogging</item>
+        <item>Available</item>
+        <item>Busy</item>
+        <item>In a meeting</item>
+        <item>At work</item>
+        <item>At gym</item>
+    </string-array>
+
+    <!-- contact type -->
+    <string-array name="contactType">
+        <item>Mobile</item>
+        <item>Work</item>
+        <item>Home</item>
+        <item>Work</item>
+        <item>Mobile</item>
+        <item>Mobile</item>
+    </string-array>
+    <string name="GOOGLE_MAPS_API_KEY">AIzaSyD4FS-ZAKH9m4sIok9G_RbP_WOtZoPIRe0</string>
+    <string name="GEO_CODE_API_KEY">AIzaSyD6sz1rz21RLdiYM6cuvzqVVXwcZtPeItE</string>
+</resources>

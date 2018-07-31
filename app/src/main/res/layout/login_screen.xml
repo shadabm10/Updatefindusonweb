@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/login_bg"
+    android:orientation="vertical"
+     >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="130sp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/logo_white"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tag3"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="20sp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="30dp">
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:backgroundTint="@color/white"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:hint="@string/username"
+            android:drawablePadding="15dp"
+            android:drawableLeft="@mipmap/ico_user"
+            android:layout_marginTop="5dp"
+           >
+
+
+        </EditText>>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@mipmap/ico_pass"
+            android:hint="@string/password"
+            android:singleLine="true"
+            android:backgroundTint="@color/white"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColorHint="@color/white"
+            android:textSize="14sp"
+            android:drawablePadding="15sp"
+            android:textColor="@color/white"
+
+
+            />
+
+        <!-- Login Button -->
+        <TextView
+            android:id="@+id/login_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/login"
+            android:textSize="16sp"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:background="@drawable/grey_bg_tv"
+            android:layout_weight="1"
+            android:layout_marginTop="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/button"
+            android:layout_marginStart="5dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forget_password"
+
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/not_yet_member"
+
+                android:paddingLeft="10dp"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/register"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/white"
+                android:id="@+id/register"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skip to Homepage"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"/>
+
+        <!-- Link to Login Screen -->
+
+        <!--  <Button
+              android:id="@+id/btnLinkToRegisterScreen"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="40dip"
+              android:background="@null"
+              android:text="@string/btn_link_to_register"
+              android:textAllCaps="false"
+              android:textColor="@color/white"
+              android:textSize="15dp" />-->
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

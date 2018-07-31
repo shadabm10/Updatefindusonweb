@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@mipmap/header"
+        >
+<!--
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:src="@mipmap/listview_32"
+            android:tint="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10sp"/>
+-->
+        <ImageView
+            android:id="@+id/header_image"
+            android:layout_width="120sp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/logo_white"
+            android:layout_centerInParent="true"
+
+            android:layout_gravity="center"/>
+        <EditText
+            android:id="@+id/search_service"
+            android:layout_width="180sp"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:backgroundTint="@android:color/transparent"
+            android:textColorHint="@color/white"
+            android:hint="Search by code"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"/>
+        <ImageView
+            android:id="@+id/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/search32"
+            android:padding="5dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/cart_img"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:id="@+id/cart_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:text="Back"
+            android:layout_marginRight="10sp"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:padding="5dp"
+            android:contentDescription="@string/app_name"
+            android:background="@drawable/button_home_screee"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+<!--
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+
+        >
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="25sp"
+            android:tint="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10sp"
+            android:id="@+id/textView" />
+
+
+
+
+
+    </RelativeLayout>
+-->
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/img_sort"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/img_sort" />
+
+
+</LinearLayout>

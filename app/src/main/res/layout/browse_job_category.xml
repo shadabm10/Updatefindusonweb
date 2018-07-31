@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Screen.HomeScreen"
+    android:orientation="vertical"
+    android:background="@mipmap/register_bg">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+           >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+
+                >
+                <ImageView
+                    android:id="@+id/menu"
+                    android:layout_width="25sp"
+                    android:layout_height="25sp"
+                    android:src="@mipmap/listview_32"
+                    android:tint="@color/white"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10sp"/>
+                <TextView
+                    android:id="@+id/cart_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:text="Back"
+                    android:layout_marginRight="10sp"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:layout_alignParentEnd="true"
+                    android:padding="5dp"
+                    android:contentDescription="@string/app_name"
+                    android:background="@drawable/button_home_screee"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tag2"
+                android:layout_marginTop="50sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/browse"
+                android:gravity="center"
+                android:layout_marginBottom="10sp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/browse_by_cat_by_services"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:background="@drawable/button_home_screee"
+                android:layout_marginLeft="30sp"
+                android:layout_marginRight="30sp"
+                android:singleLine="true"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:hint="@string/browse_product"
+                android:textColorHint="@color/white"
+                android:textSize="14sp"
+                android:layout_marginTop="100sp"
+                android:layout_marginBottom="20sp"
+                android:paddingLeft="20sp"/>
+            <TextView
+                android:id="@+id/browse_location"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:background="@drawable/button_home_screee"
+                android:layout_marginLeft="30sp"
+                android:layout_marginRight="30sp"
+                android:singleLine="true"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:hint="@string/browse_location"
+                android:textColorHint="@color/white"
+                android:textSize="14sp"
+                android:paddingLeft="20sp"/>
+            <TextView
+                android:id="@+id/browse_by_cat"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:gravity="center"
+                android:background="@drawable/button_home_screee"
+                android:layout_marginLeft="30sp"
+                android:layout_marginRight="30sp"
+                android:layout_marginTop="20sp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:hint="@string/browse_category"
+                android:textColorHint="@color/white"
+                android:textSize="14sp"
+                android:paddingLeft="20sp"/>
+
+            <TextView
+                android:id="@+id/browse_jobs"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:background="@drawable/button_home_screee"
+                android:layout_marginLeft="30sp"
+                android:layout_marginRight="30sp"
+                android:layout_marginTop="20sp"
+                android:hint="@string/browse_job"
+                android:textColorHint="@color/white"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:paddingLeft="20sp"/>
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

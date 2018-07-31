@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/main_layout_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:background="@mipmap/header"
+            >
+<!--
+            <ImageView
+                android:id="@+id/menu"
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:src="@mipmap/listview_32"
+                android:tint="@color/white"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10sp"/>
+-->
+            <ImageView
+                android:id="@+id/header_image"
+                android:layout_width="120sp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/logo_white"
+                android:layout_centerInParent="true"
+
+                android:layout_gravity="center"/>
+            <EditText
+                android:id="@+id/serach_edittext"
+                android:layout_width="180sp"
+                android:singleLine="true"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColorHint="@color/white"
+                android:hint="Search by code"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"/>
+            <ImageView
+                android:id="@+id/search_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/search32"
+                android:padding="5dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/cart_img"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:id="@+id/cart_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:text="Back"
+                android:layout_marginRight="10sp"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:layout_alignParentEnd="true"
+                android:padding="5dp"
+                android:contentDescription="@string/app_name"
+                android:background="@drawable/button_home_screee"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:orientation="horizontal">
+
+
+
+
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="25sp"
+                android:tint="@color/white"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_toLeftOf="@+id/post_requirement"
+                android:id="@+id/textView" />
+
+
+            <TextView
+                android:id="@+id/post_requirement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/post_req"
+                android:textColor="@color/white"
+                android:background="@color/button"
+                android:layout_centerVertical="true"
+                android:textSize="10sp"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:layout_toLeftOf="@+id/ib_icon_slide"
+                />
+
+
+
+
+            <ImageButton
+                android:id="@+id/ib_icon_slide"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/filter96"
+                android:layout_alignParentRight="true"/>
+
+
+
+
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/img_sort"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/img_sort" />
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rl_slide_layout"
+        android:layout_width="200dp"
+        android:layout_alignParentRight="true"
+        android:layout_height="match_parent"
+        android:background="#25333e"
+        >
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search_button"
+            android:textColor="@color/white"
+            android:background="@color/button"
+            android:layout_gravity="center_horizontal"
+            android:textSize="10sp"
+            android:visibility="gone"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_search"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="70dp"
+            android:id="@+id/ll_detail_1"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/edt_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tint="@color/white"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:hint="Location"
+                android:textSize="10sp"
+                android:backgroundTint="@color/white"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                />
+
+            <EditText
+                android:id="@+id/edt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tint="@color/white"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:hint="@string/title"
+                android:textSize="10sp"
+                android:backgroundTint="@color/white"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                />
+            <EditText
+                android:id="@+id/edt_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tint="@color/white"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:hint="@string/decription"
+                android:textSize="10sp"
+                android:backgroundTint="@color/white"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                />
+            <EditText
+                android:id="@+id/edt_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tint="@color/white"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:hint="@string/category"
+                android:textSize="10sp"
+                android:backgroundTint="@color/white"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                />
+            <EditText
+                android:id="@+id/edt_keyword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tint="@color/white"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:hint="Keyword"
+                android:textSize="10sp"
+                android:backgroundTint="@color/white"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tint="@color/white"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:hint="  Price Range"
+                android:textSize="10sp"
+                android:backgroundTint="@color/white"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edt_price_from"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tint="@color/white"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:hint="From"
+                    android:layout_weight="1"
+                    android:textSize="10sp"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginRight="5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    />
+
+
+                <EditText
+                    android:id="@+id/edt_price_to"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tint="@color/white"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:hint="To"
+                    android:textSize="10sp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginRight="5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tint="@color/white"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:hint="  Seller Level"
+                android:textSize="10sp"
+                android:backgroundTint="@color/white"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/radiogroup"
+                android:checkedButton="@+id/sound" >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:textSize="10sp"
+                    android:buttonTint="@color/white"
+                    android:textColor="@color/white"
+                    android:text="Grade One" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Grade Two"
+                    android:buttonTint="@color/white"
+                    android:textSize="10sp"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Grade Three"
+                    android:buttonTint="@color/white"
+                    android:textSize="10sp"/>
+
+            </RadioGroup>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_search_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search_button"
+            android:textColor="@color/white"
+            android:background="@color/button"
+            android:layout_gravity="center_horizontal"
+            android:textSize="10sp"
+            android:padding="10dp"
+            android:layout_below="@+id/ll_detail_1"
+            android:layout_margin="5dp"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>
