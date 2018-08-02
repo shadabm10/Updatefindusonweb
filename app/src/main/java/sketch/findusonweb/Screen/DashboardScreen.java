@@ -13,7 +13,7 @@ import sketch.findusonweb.R;
 
 
 
-public class DashboardScreen extends AppCompatActivity {
+public class  DashboardScreen extends AppCompatActivity {
 
     LinearLayout ll_products,manage_proposal,ll_claim_business,ll_recommend_business,ll_dashboard;
     TextView back;

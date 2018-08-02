@@ -155,6 +155,8 @@
     <string name="recommend">Recommend A Business</string>
     <string name="claimbusiness">Claim your Business</string>
     <string name="listingname">Listing Name</string>
+    <string name="my_invoice">My Invoice</string>
+    <string name="submited_review">My Submitted Review</string>
 
     <!--Proposal Screen-->
     <string name="proposal">Proposal</string>
