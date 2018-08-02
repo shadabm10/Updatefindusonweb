@@ -79,6 +79,7 @@ public class AdapterFavorite  extends RecyclerView.Adapter<AdapterFavorite.MyVie
         //  final HashMap<String, String> hashMap_child = (HashMap<String, String>) getChild(groupPosition, childPosition);
 
 
+/*
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -89,6 +90,7 @@ public class AdapterFavorite  extends RecyclerView.Adapter<AdapterFavorite.MyVie
 
             }
         });
+*/
     }
 
     @Override

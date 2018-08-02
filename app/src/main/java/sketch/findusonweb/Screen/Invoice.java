@@ -3,7 +3,6 @@ package sketch.findusonweb.Screen;
 import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
@@ -19,42 +18,36 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 import es.dmoral.toasty.Toasty;
-import sketch.findusonweb.Adapter.AdapterCreditHistory;
-import sketch.findusonweb.Adapter.AdapterReviewAll;
+import sketch.findusonweb.Adapter.Adapter_invoice;
 import sketch.findusonweb.Constants.AppConfig;
 import sketch.findusonweb.Controller.GlobalClass;
 import sketch.findusonweb.R;
 import sketch.findusonweb.Utils.Shared_Preference;
 
-public class CreditHistory extends AppCompatActivity {
+public class Invoice extends AppCompatActivity {
     ListView listing;
-    TextView total,Used,balanced,back;
     String TAG = "Favorites";
     GlobalClass globalClass;
     Shared_Preference prefrence;
-    AdapterCreditHistory adapterCreditHistory;
+    Adapter_invoice adapter_invoice;
+    TextView back_img;
     ProgressDialog pd;
     ArrayList<HashMap<String,String>> list_namesfavoriteAll;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_credit_history);
-        listing=findViewById(R.id.listfavorite);
-        total=findViewById(R.id.total);
-        Used=findViewById(R.id.used);
-        back=findViewById(R.id.back_img);
-        balanced=findViewById(R.id.balance);
+        setContentView(R.layout.myinvoice);
+        listing=findViewById(R.id.invoice_list);
+        back_img=findViewById(R.id.img_back);
         globalClass = (GlobalClass) getApplicationContext();
-        prefrence = new Shared_Preference(CreditHistory.this);
+        prefrence = new Shared_Preference(Invoice.this);
         prefrence.loadPrefrence();
-        pd = new ProgressDialog(CreditHistory.this);
+        pd = new ProgressDialog(Invoice.this);
         pd.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         pd.setMessage(getResources().getString(R.string.loading));
         if (globalClass.isNetworkAvailable()) {
@@ -64,13 +57,14 @@ public class CreditHistory extends AppCompatActivity {
                 finish();*/
             }
         } else {
-            Toasty.info(CreditHistory.this, getResources().getString(R.string.check_internet), Toast.LENGTH_LONG, true).show();
+            Toasty.info(Invoice.this, getResources().getString(R.string.check_internet), Toast.LENGTH_LONG, true).show();
         }
         ReviewList();
         list_namesfavoriteAll=new ArrayList<>();
-        back.setOnClickListener(new View.OnClickListener() {
+        back_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 finish();
             }
         });
@@ -79,7 +73,7 @@ public class CreditHistory extends AppCompatActivity {
         // Tag used to cancel the request
         String tag_string_req = "req_login";
 
-         pd.show();
+        // pd.show();
 
         StringRequest strReq = new StringRequest(Request.Method.POST,
                 AppConfig.URL_DEV, new Response.Listener<String>() {
@@ -100,43 +94,46 @@ public class CreditHistory extends AppCompatActivity {
                     Log.d(TAG, "onResponse: " + jobj);
 
                     String result = jobj.get("success").toString().replaceAll("\"", "");
-                    String total_credits = jobj.get("total_credits").toString().replaceAll("\"", "");
-                    String used_credits = jobj.get("used_credits").toString().replaceAll("\"", "");
                     if (result.equals("1")) {
-                        JsonArray data = jobj.getAsJsonArray("records");
+                        JsonArray data = jobj.getAsJsonArray("data");
                         Log.d(TAG, "Data: " + data);
 
                         for (int i = 0; i < data.size(); i++) {
 
                             JsonObject images1 = data.get(i).getAsJsonObject();
-                            String id = images1.get("id").toString().replaceAll("\"", "");
+                            String invoice_id = images1.get("invoice_id").toString().replaceAll("\"", "");
+                            String order_id = images1.get("order_id").toString().replaceAll("\"", "");
+                            String user_id = images1.get("user_id").toString().replaceAll("\"", "");
+                            String order_number = images1.get("order_number").toString().replaceAll("\"", "");
                             String type = images1.get("type").toString().replaceAll("\"", "");
                             String date = images1.get("date").toString().replaceAll("\"", "");
-                            String name = images1.get("name").toString().replaceAll("\"", "");
-                            String Creditpoints = images1.get("points").toString().replaceAll("\"", "");
+                            String date_due = images1.get("date").toString().replaceAll("\"", "");
+                            String total = images1.get("total").toString().replaceAll("\"", "");
 
-                            String Comments = images1.get("Comments").toString().replaceAll("\"", "");
-                            String HTMLConvert = Html.fromHtml(name).toString();
+                            String status = images1.get("status").toString().replaceAll("\"", "");
+
                             //  Log.d(TAG, "Images 1: " + User_id);
                             HashMap<String, String> hashMap = new HashMap<>();
-                            hashMap.put("id", id);
+                            hashMap.put("invoice_id", invoice_id);
+                            hashMap.put("order_id", order_id);
+                            hashMap.put("user_id", user_id);
+                            hashMap.put("order_number", order_number);
                             hashMap.put("type", type);
-                            hashMap.put("points", Creditpoints);
+                            hashMap.put("date_due", date_due);
+                            hashMap.put("total", total);
+                            hashMap.put("status", status);
                             hashMap.put("date", date);
-                            hashMap.put("name", HTMLConvert);
-                            hashMap.put("Comments", Comments);
+
 
 
                             list_namesfavoriteAll.add(hashMap);
                             Log.d(TAG, "Listmane: " + list_namesfavoriteAll);
 
                         }
-                        total.setText(total_credits);
-                        Used.setText(used_credits);
                         Log.d(TAG, "Listmane outer: " + list_namesfavoriteAll);
 
-                        adapterCreditHistory = new AdapterCreditHistory(CreditHistory.this, list_namesfavoriteAll);
-                        listing.setAdapter(adapterCreditHistory);
+                        adapter_invoice = new Adapter_invoice(Invoice.this, list_namesfavoriteAll);
+                        listing.setAdapter(adapter_invoice);
                     }
                     else
 
@@ -144,13 +141,13 @@ public class CreditHistory extends AppCompatActivity {
                     {
 
 
-                        Toasty.success(CreditHistory.this, result, Toast.LENGTH_SHORT, true).show();
+                        Toasty.success(Invoice.this, result, Toast.LENGTH_SHORT, true).show();
                     }
                     // favorite();
 
                 } catch (Exception e) {
 
-                    Toasty.warning(CreditHistory.this, "NO DATA FOUND", Toast.LENGTH_SHORT, true).show();
+                    Toasty.warning(Invoice.this, "NO DATA FOUND", Toast.LENGTH_SHORT, true).show();
                     e.printStackTrace();
 
                 }
@@ -173,7 +170,7 @@ public class CreditHistory extends AppCompatActivity {
                 // Posting parameters to login url
                 Map<String, String> params = new HashMap<>();
                 params.put("user_id", globalClass.getId());
-                params.put("view", "getCreditHistory");
+                params.put("view", "getMyInvoices");
 
                 Log.d(TAG, "getParams: "+params);
                 return params;

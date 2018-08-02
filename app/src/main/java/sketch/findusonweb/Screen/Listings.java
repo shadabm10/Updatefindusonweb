@@ -74,7 +74,7 @@ ListView listing;
         // Tag used to cancel the request
         String tag_string_req = "req_login";
 
-        // pd.show();
+         pd.show();
 
         StringRequest strReq = new StringRequest(Request.Method.POST,
                 AppConfig.URL_DEV, new Response.Listener<String>() {

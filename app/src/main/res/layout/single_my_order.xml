@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/RL_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order # :"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="16dp"/>
+        <TextView
+            android:id="@+id/tv_order_value"
+            android:layout_toRightOf="@+id/tv_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="16dp"/>
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/RL_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date       :"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="16dp"/>
+        <TextView
+            android:id="@+id/tv_date_value"
+            android:layout_toRightOf="@+id/tv_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="16dp"/>
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/RL_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Description"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="16dp"/>
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/RL_amt_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/borderblack">
+
+        <TextView
+            android:id="@+id/tv_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TO                           "
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="16dp"/>
+        <TextView
+            android:id="@+id/tv_to_value"
+            android:layout_toRightOf="@+id/tv_to"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AMOUNT               "
+            android:textStyle="bold"
+            android:layout_below="@+id/tv_to_value"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="16dp"/>
+        <TextView
+            android:id="@+id/tv_amount_value"
+            android:layout_below="@+id/tv_to_value"
+            android:layout_toRightOf="@+id/tv_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/light_green"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="16dp"/>
+        <TextView
+            android:id="@+id/tv_order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ORDER STATUS   "
+            android:textStyle="bold"
+            android:layout_below="@+id/tv_amount"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="16dp"/>
+        <TextView
+            android:id="@+id/tv_order_status_value"
+            android:layout_below="@+id/tv_amount_value"
+            android:layout_toRightOf="@+id/tv_order_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:id="@+id/tv_invoice_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INVOICE STATUS"
+            android:textStyle="bold"
+            android:layout_below="@+id/tv_order_status"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="16dp"/>
+        <TextView
+            android:id="@+id/tv_invoice_status_value"
+            android:layout_below="@+id/tv_order_status_value"
+            android:layout_toRightOf="@+id/tv_invoice_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="16dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/RL_order_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type        :"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="16dp"/>
+        <TextView
+            android:id="@+id/tv_type_value"
+            android:layout_toRightOf="@+id/tv_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="16dp"/>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RL_cash_back_percent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_cash_back_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cashback Percentage"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="16dp"/>
+        <TextView
+            android:id="@+id/tv_cash_back_percent_value"
+            android:layout_toRightOf="@+id/tv_cash_back_percent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="16dp"/>
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/RL_estimated_cashback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_estimated_cashback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estimated Cashback"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="16dp"/>
+        <TextView
+            android:id="@+id/tv_estiamted_cashback_value"
+            android:layout_toRightOf="@+id/tv_estimated_cashback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="16dp"/>
+
+
+
+    </RelativeLayout>
+    <TextView
+        android:layout_below="@id/RL_estimated_cashback"
+        android:id="@+id/view_order"
+        android:text="View Order"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp"
+        android:layout_gravity="right"
+        android:paddingBottom="5dp"
+        android:background="@drawable/orange_border_corner"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
+
+
+</LinearLayout>

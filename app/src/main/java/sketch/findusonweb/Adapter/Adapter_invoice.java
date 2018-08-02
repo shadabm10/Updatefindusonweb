@@ -18,15 +18,14 @@ import java.util.HashMap;
 
 import sketch.findusonweb.Controller.GlobalClass;
 import sketch.findusonweb.R;
-import sketch.findusonweb.Screen.EditReview;
 import sketch.findusonweb.Screen.Job_details;
 import sketch.findusonweb.Screen.SendProposal;
 
 /**
- * Created by developer on 1/8/18.
+ * Created by developer on 2/8/18.
  */
 
-public class AdapterReviewAll extends BaseAdapter {
+public class Adapter_invoice  extends BaseAdapter {
 
     Context mContext;
 
@@ -34,7 +33,7 @@ public class AdapterReviewAll extends BaseAdapter {
 
     LayoutInflater inflater;
 
-    TextView name,type_date,status,edit;
+    TextView invoice_id,date,order_id,amount,order_status,total,type,balance,payment_status,pay_invoice;
     RatingBar rating;
     ImageView img;
     ArrayList<HashMap<String,String>> list_names;
@@ -45,7 +44,7 @@ public class AdapterReviewAll extends BaseAdapter {
 
 
 
-    public AdapterReviewAll(Context c, ArrayList<HashMap<String,String>> list_names) {
+    public Adapter_invoice(Context c, ArrayList<HashMap<String,String>> list_names) {
         mContext = c;
         this.list_names = list_names;
         globalClass = ((GlobalClass) mContext.getApplicationContext());
@@ -84,19 +83,42 @@ public class AdapterReviewAll extends BaseAdapter {
 
 
         Log.d("TAG", "getItem: "+position);
-        View view1 = inflater.inflate(R.layout.review_single_row, parent, false);
-        name=view1.findViewById(R.id.title_review_new);
-        type_date=view1.findViewById(R.id.date_review);
-        status=view1.findViewById(R.id.status_review);
-        rating=view1.findViewById(R.id.ratingBar);
-        edit=view1.findViewById(R.id.edit_review);
+        View view1 = inflater.inflate(R.layout.single_my_invoice, parent, false);
+        invoice_id=view1.findViewById(R.id.tv_invoice_value);
+        date=view1.findViewById(R.id.tv_date_value);
+        order_id=view1.findViewById(R.id.tv_order_value);
+        total=view1.findViewById(R.id.tv_total_value);
+        type=view1.findViewById(R.id.tv_type_value);
+        balance=view1.findViewById(R.id.tv_balance_value);
+        payment_status=view1.findViewById(R.id.tv_paymemt_value);
+        pay_invoice=view1.findViewById(R.id.pay_invoice);
+
+        //pay_invoice.setVisibility(View.GONE);
+        invoice_id.setText(list_names.get(position).get("invoice_id"));
+        date.setText(list_names.get(position).get("date"));
+        order_id.setText(list_names.get(position).get("order_number"));
+        payment_status.setText(list_names.get(position).get("status"));
+        total.setText(list_names.get(position).get("total"));
+        type.setText(list_names.get(position).get("type"));
+
+        if(list_names.get(position).get("status").equals("paid")){
+            payment_status.setText("Paid");
+            payment_status.setTextColor(mContext.getResources().getColor(R.color.green_dark));
+            pay_invoice.setVisibility(View.GONE);
 
 
 
-        name.setText(list_names.get(position).get("title"));
-        type_date.setText(list_names.get(position).get("date"));
-        status.setText(list_names.get(position).get("status"));;
-        rating.setRating(Float.parseFloat(list_names.get(position).get("rating")));
+        }else if(list_names.get(position).get("status").equals("unpaid")){
+            payment_status.setText("Unpaid");
+            payment_status.setTextColor(mContext.getResources().getColor(R.color.red));
+            pay_invoice.setVisibility(View.VISIBLE);
+
+
+            Log.d("buzz", "getView: "+list_names.get(position).get("status"));
+
+        }
+
+
 /*
         view1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,10 +130,10 @@ public class AdapterReviewAll extends BaseAdapter {
             }
         });
 */
-        edit.setOnClickListener(new View.OnClickListener() {
+        pay_invoice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext, EditReview.class);
+                Intent intent = new Intent(mContext, SendProposal.class);
                 intent.putExtra("id", list_names.get(position).get("id"));
                 Log.d("tag", "onClick: " + list_names.get(position).get("id"));
                 mContext.startActivity(intent);

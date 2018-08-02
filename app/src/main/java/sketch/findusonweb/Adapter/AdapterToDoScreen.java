@@ -87,6 +87,7 @@ public class AdapterToDoScreen extends RecyclerView.Adapter<AdapterToDoScreen.My
         //  final HashMap<String, String> hashMap_child = (HashMap<String, String>) getChild(groupPosition, childPosition);
 
 
+/*
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -97,6 +98,7 @@ public class AdapterToDoScreen extends RecyclerView.Adapter<AdapterToDoScreen.My
 
             }
         });
+*/
     }
 
     @Override

@@ -15,7 +15,7 @@ import sketch.findusonweb.R;
 
 public class  DashboardScreen extends AppCompatActivity {
 
-    LinearLayout ll_products,manage_proposal,ll_claim_business,ll_recommend_business,ll_dashboard;
+    LinearLayout ll_products,ll_invoice,ll_claim_business,ll_recommend_business,ll_dashboard;
     TextView back;
 
 
@@ -27,9 +27,9 @@ public class  DashboardScreen extends AppCompatActivity {
         ll_recommend_business=findViewById(R.id.LL_recommedbusiness);
         ll_products =findViewById(R.id.ll_products);
         ll_dashboard=findViewById(R.id.dashboard);
+        ll_invoice=findViewById(R.id.LL_invoice);
 
-       // manage_proposal =findViewById(R.id.ll_view_manage_proposal);
-       // ll_my_message=findViewById(R.id.LL_mymessage);
+
 
         back=findViewById(R.id.back_img);
 
@@ -44,6 +44,13 @@ public class  DashboardScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(DashboardScreen.this, ToDoScreen.class);
+                startActivity(intent);
+            }
+        });
+        ll_invoice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DashboardScreen.this, Invoice.class);
                 startActivity(intent);
             }
         });
