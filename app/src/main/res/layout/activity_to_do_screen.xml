@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
     <RelativeLayout
+        android:id="@+id/rl_top"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal"
@@ -50,9 +51,16 @@
             android:layout_alignParentRight="true" />
 
     </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/my_credit_tv">
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:id="@+id/nsll"
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -69,13 +77,19 @@
                 android:textStyle="bold"
                 android:padding="10dp"
                 android:visibility="visible" />
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/to_do"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginBottom="5dp"
-                android:background="@color/white"/>
+                android:layout_height="match_parent">
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/to_do"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/white"/>
+            </RelativeLayout>
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -117,12 +131,16 @@
                    />
 
             </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/favorites"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:background="@color/white"/>
+            </RelativeLayout>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -163,6 +181,9 @@
                     />
 
             </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/my_reviews"
@@ -170,7 +191,28 @@
                 android:layout_height="200dp"
                 android:background="@color/white"/>
 
-
+            </RelativeLayout>
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
-</LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/my_credit_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orange"
+        android:gravity="center"
+        android:text="My Credit History"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible" />
+
+
+
+
+
+</RelativeLayout>

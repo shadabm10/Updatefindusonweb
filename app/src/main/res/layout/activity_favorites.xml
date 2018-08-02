@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@mipmap/header"
+        >
+
+        <ImageView
+            android:id="@+id/header_image"
+            android:layout_width="120sp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/logo_white"
+            android:layout_centerInParent="true"
+
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:text="Back"
+            android:layout_marginRight="10sp"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:padding="5dp"
+            android:contentDescription="@string/app_name"
+            android:background="@drawable/button_home_screee"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/all_list"
+            android:text="All"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:padding="12dp"
+            android:textColor="@color/button"
+            android:textStyle="bold"
+            android:background="@drawable/borderblack"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="left|center_vertical" />
+
+        <TextView
+            android:id="@+id/Listing_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Listings"
+            android:textSize="16dp"
+            android:padding="12dp"
+            android:textStyle="bold"
+            android:background="@drawable/borderblack"
+            android:textColor="@color/button"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/product_list"
+            android:gravity="center"
+            android:text="Product"
+            android:textSize="16dp"
+            android:padding="12dp"
+            android:textColor="@color/button"
+            android:layout_width="match_parent"
+            android:background="@drawable/borderblack"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="right|center_vertical" />
+
+
+    </LinearLayout>
+    <ListView
+        android:layout_below="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listfavorite"></ListView>
+
+</RelativeLayout>
+
+</LinearLayout>
