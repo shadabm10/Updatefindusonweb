@@ -39,248 +39,497 @@
 
     </RelativeLayout>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="horizontal">
-
-
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/dashboard"
                 android:layout_width="match_parent"
-                android:layout_weight="1"
-                android:layout_marginRight="5dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/dashboard_bg"
-                android:orientation="vertical"
-                android:padding="10dp"
-                android:gravity="center"
-                >
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/dashboard"
-                    android:layout_centerHorizontal="true"
-                    android:textColor="@color/dark_grey"
-                    android:textSize="16sp"
-                    android:tint="@color/white"
-                    android:gravity="center" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/dashboard"
-                    android:layout_centerHorizontal="true"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:layout_marginTop="5dp"
-                    android:gravity="center" />
+                android:layout_height="100dp"
+                android:orientation="horizontal">
 
 
 
+                <LinearLayout
+                    android:id="@+id/dashboard"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dashboard_bg"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/dashboard"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="16sp"
+                        android:tint="@color/white"
+                        android:gravity="center" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dashboard"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center" />
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_products"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dashboard_bg"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/product2"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="16sp"
+
+                        android:gravity="center" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/product_services"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+
+                        android:layout_marginTop="5dp"
+                        android:gravity="center" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+
+                <LinearLayout
+                    android:id="@+id/LL_recommedbusiness"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dashboard_bg"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/dashboard"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="16sp"
+                        android:tint="@color/white"
+                        android:gravity="center" />
+                    <TextView
+                        android:id="@+id/recommend_business"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/recommend"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center" />
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_claim_business"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dashboard_bg"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/claim_business"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="16sp"
+
+                        android:gravity="center" />
+                    <TextView
+                        android:id="@+id/manage_proposal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/claimbusiness"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+
+                <LinearLayout
+                    android:id="@+id/LL_invoice"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dashboard_bg"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/incl"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="16sp"
+                        android:tint="@color/white"
+                        android:gravity="center" />
+                    <TextView
+                        android:id="@+id/My_invoice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_invoice"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center" />
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_submited_review"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dashboard_bg"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/review"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="16sp"
+
+                        android:gravity="center" />
+                    <TextView
+                        android:id="@+id/submited_review"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/submited_review"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+
+                <LinearLayout
+                    android:id="@+id/ll_invite_friends"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dashboard_bg"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/incl"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="16sp"
+                        android:tint="@color/white"
+                        android:gravity="center" />
+                    <TextView
+                        android:id="@+id/invite_friends_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/invite_friends"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center" />
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_my_orders"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dashboard_bg"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/review"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="16sp"
+
+                        android:gravity="center" />
+                    <TextView
+                        android:id="@+id/my_orders_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_orders"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+
+                <LinearLayout
+                    android:id="@+id/ll_favorites"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dashboard_bg"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/incl"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="16sp"
+                        android:tint="@color/white"
+                        android:gravity="center" />
+                    <TextView
+                        android:id="@+id/favorites_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/favorites"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center" />
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_financial"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dashboard_bg"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/review"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="16sp"
+
+                        android:gravity="center" />
+                    <TextView
+                        android:id="@+id/financial_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/financial"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+
+                <LinearLayout
+                    android:id="@+id/ll_my_schedule"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dashboard_bg"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/incl"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="16sp"
+                        android:tint="@color/white"
+                        android:gravity="center" />
+                    <TextView
+                        android:id="@+id/my_schedule_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_schedule"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center" />
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_manage_proposal"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dashboard_bg"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/review"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="16sp"
+
+                        android:gravity="center" />
+                    <TextView
+                        android:id="@+id/manage_proposal_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/manage_proposal"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center" />
+                </LinearLayout>
 
             </LinearLayout>
 
 
-            <LinearLayout
-                android:id="@+id/ll_products"
-                android:layout_width="match_parent"
-                android:layout_weight="1"
-                android:layout_marginLeft="5dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/dashboard_bg"
-                android:orientation="vertical"
-                android:padding="10dp"
-                android:gravity="center"
-                >
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/product2"
-                    android:layout_centerHorizontal="true"
-                    android:textColor="@color/dark_grey"
-                    android:textSize="16sp"
-
-                    android:gravity="center" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/product_services"
-                    android:layout_centerHorizontal="true"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-
-                    android:layout_marginTop="5dp"
-                    android:gravity="center" />
-            </LinearLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-
-
-            <LinearLayout
-                android:id="@+id/LL_recommedbusiness"
-                android:layout_width="match_parent"
-                android:layout_weight="1"
-                android:layout_marginRight="5dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/dashboard_bg"
-                android:orientation="vertical"
-                android:padding="10dp"
-                android:gravity="center"
-                >
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/dashboard"
-                    android:layout_centerHorizontal="true"
-                    android:textColor="@color/dark_grey"
-                    android:textSize="16sp"
-                    android:tint="@color/white"
-                    android:gravity="center" />
-                <TextView
-                    android:id="@+id/recommend_business"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/recommend"
-                    android:layout_centerHorizontal="true"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:layout_marginTop="5dp"
-                    android:gravity="center" />
-
-
-
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/ll_claim_business"
-                android:layout_width="match_parent"
-                android:layout_weight="1"
-
-                android:layout_marginLeft="5dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/dashboard_bg"
-                android:orientation="vertical"
-                android:padding="10dp"
-                android:gravity="center"
-                >
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/claim_business"
-                    android:layout_centerHorizontal="true"
-                    android:textColor="@color/dark_grey"
-                    android:textSize="16sp"
-
-                    android:gravity="center" />
-                <TextView
-                    android:id="@+id/manage_proposal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/claimbusiness"
-                    android:layout_centerHorizontal="true"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:layout_marginTop="5dp"
-                    android:gravity="center" />
-            </LinearLayout>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-
-
-            <LinearLayout
-                android:id="@+id/LL_invoice"
-                android:layout_width="match_parent"
-                android:layout_weight="1"
-                android:layout_marginRight="5dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/dashboard_bg"
-                android:orientation="vertical"
-                android:padding="10dp"
-                android:gravity="center"
-                >
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/incl"
-                    android:layout_centerHorizontal="true"
-                    android:textColor="@color/dark_grey"
-                    android:textSize="16sp"
-                    android:tint="@color/white"
-                    android:gravity="center" />
-                <TextView
-                    android:id="@+id/My_invoice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/my_invoice"
-                    android:layout_centerHorizontal="true"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:layout_marginTop="5dp"
-                    android:gravity="center" />
-
-
-
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/ll_submited_review"
-                android:layout_width="match_parent"
-                android:layout_weight="1"
-
-                android:layout_marginLeft="5dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/dashboard_bg"
-                android:orientation="vertical"
-                android:padding="10dp"
-                android:gravity="center"
-                >
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/review"
-                    android:layout_centerHorizontal="true"
-                    android:textColor="@color/dark_grey"
-                    android:textSize="16sp"
-
-                    android:gravity="center" />
-                <TextView
-                    android:id="@+id/submited_review"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/submited_review"
-                    android:layout_centerHorizontal="true"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:layout_marginTop="5dp"
-                    android:gravity="center" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
+    </ScrollView>
 </LinearLayout>

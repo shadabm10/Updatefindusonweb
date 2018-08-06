@@ -151,12 +151,20 @@
     <string name="my_order">My Order</string>
     <string name="manage_request">Manage Request</string>
     <string name="message">My Message</string>
+    <string name="invite_friends">Invite Friends</string>
+
+
     <!--Recommend Business-->
     <string name="recommend">Recommend A Business</string>
     <string name="claimbusiness">Claim your Business</string>
     <string name="listingname">Listing Name</string>
     <string name="my_invoice">My Invoice</string>
     <string name="submited_review">My Submitted Review</string>
+    <string name="my_orders">My Orders</string>
+    <string name="favorites">Favorites</string>
+    <string name="financial">Financial Transaction</string>
+    <string name="my_schedule">My Schedule</string>
+    <string name="manage_proposal">Manage Proposal</string>
 
     <!--Proposal Screen-->
     <string name="proposal">Proposal</string>
@@ -209,4 +217,5 @@
     </string-array>
     <string name="GOOGLE_MAPS_API_KEY">AIzaSyD4FS-ZAKH9m4sIok9G_RbP_WOtZoPIRe0</string>
     <string name="GEO_CODE_API_KEY">AIzaSyD6sz1rz21RLdiYM6cuvzqVVXwcZtPeItE</string>
+    <string name="title_activity_financial_transaction">Financial_transaction</string>
 </resources>
