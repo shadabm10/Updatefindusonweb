@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Screen.HomeScreen">
+    <RelativeLayout
+        android:id="@+id/rl_view"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ll_manage"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        app:cpb_background_progressbar_color="@color/grey"
+                        app:cpb_background_progressbar_width="5dp"
+                        app:cpb_progressbar_color="#F44336"
+                        app:cpb_progressbar_width="10dp"
+                        />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:textColor="@color/dark_voilet"
+                    >
+
+                    <TextView
+                        android:id="@+id/total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TOTAL"
+                        android:textSize="10dp"
+                        android:textStyle="bold"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/dark_voilet"
+
+                       />
+
+                    <TextView
+                        android:id="@+id/tv_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/total"
+                        android:textStyle="bold"
+                        android:textSize="10dp"
+                        android:layout_marginTop="5dp"
+
+                        />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        app:cpb_background_progressbar_color="@color/grey"
+                        app:cpb_background_progressbar_width="5dp"
+                        app:cpb_progressbar_color="#F44336"
+                        app:cpb_progressbar_width="10dp"
+                        />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:textColor="@color/dark_voilet"
+                    >
+
+                    <TextView
+                        android:id="@+id/used"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="USED"
+                        android:textSize="10dp"
+                        android:textStyle="bold"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/dark_voilet"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_used"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/used"
+                        android:textStyle="bold"
+                        android:textSize="10dp"
+                        android:layout_marginTop="5dp"
+
+                        />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        app:cpb_background_progressbar_color="@color/grey"
+                        app:cpb_background_progressbar_width="5dp"
+                        app:cpb_progressbar_color="#F44336"
+                        app:cpb_progressbar_width="10dp"
+                        />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:textColor="@color/dark_voilet"
+                    >
+
+                    <TextView
+                        android:id="@+id/balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BALANCE"
+                        android:textSize="10dp"
+                        android:textStyle="bold"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/dark_voilet"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/balance"
+                        android:textStyle="bold"
+                        android:textSize="10dp"
+                        android:layout_marginTop="5dp"
+
+                        />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_view"
+        android:id="@+id/credit_history_listview">
+
+    </ListView>
+
+</RelativeLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Screen.HomeScreen">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/grey_dashboard"
+
+        >
+        <ImageView
+            android:id="@+id/img_manage_proposal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/cal_xxxdpi"
+            android:padding="5dp"
+            android:tint="@color/white"/>
+
+        <TextView
+            android:id="@+id/tv_date_manage_proposal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/listview_32"
+            android:padding="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:layout_marginLeft="40dp"
+          />
+         <View android:id="@+id/view_manage_proposal"
+             android:layout_marginTop="5dp"
+             android:layout_width="1dp"
+             android:layout_marginLeft="20dp"
+             android:layout_marginBottom="5dp"
+             android:layout_centerVertical="true"
+             android:layout_height="wrap_content"
+             android:background="@color/white"
+             android:layout_toRightOf="@+id/tv_date_manage_proposal"/>
+        <ImageView
+
+            android:layout_toRightOf="@+id/view_manage_proposal"
+            android:id="@+id/img_manage_proposal_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/clock1_xxxhdpi"
+            android:padding="5dp"
+            android:layout_marginLeft="20dp"
+            android:tint="@color/white"/>
+        <TextView
+            android:id="@+id/tv_date_manage_proposal_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/listview_32"
+            android:layout_toRightOf="@+id/img_manage_proposal_date"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"
+            />
+
+
+    </RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/rl_proposal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/toolbar">
+    <RelativeLayout
+        android:id="@+id/rl_image_manage_proposal"
+        android:layout_width="100dp"
+        android:layout_height="100dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:padding="10dip"
+            android:src="@mipmap/big"
+            android:scaleType="fitXY"
+            app:riv_corner_radius="15dip"
+            app:riv_border_width="3dip"
+            app:riv_oval="false"
+            app:riv_border_color="@color/space_transparent"
+            />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_text_manage_proposal"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/rl_image_manage_proposal">
+
+        <TextView
+            android:id="@+id/tv_manage_proposal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/listview_32"
+            android:gravity="center"
+            android:textSize="10dp"
+            android:text="Your Proposal"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+
+            />
+        <TextView
+            android:id="@+id/tv_manage_proposal_brief"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/listview_32"
+            android:gravity="center"
+            android:textSize="8dp"
+            android:layout_below="@+id/tv_manage_proposal"
+            android:text=""
+            android:textColor="@color/black"
+
+            />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_eclipse_manage_proposal"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/rl_text_manage_proposal">
+
+        <RelativeLayout
+            android:id="@+id/rl_cost_in_pound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_green_dashboard"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="5dp"
+
+            >
+            <TextView
+                android:id="@+id/tv_in_pound"
+                android:layout_toRightOf="@+id/img_manage1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:gravity="center"
+
+                android:textColor="@color/white"
+                android:textSize="8dp"/>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_below="@+id/rl_cost_in_pound"
+            android:id="@+id/rl_complete_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_yellow_dashboard"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+
+            >
+            <TextView
+                android:id="@+id/tv_complete_order"
+                android:layout_toRightOf="@+id/img_manage1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:gravity="center"
+
+                android:textColor="@color/white"
+                android:textSize="8dp"/>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+</RelativeLayout>

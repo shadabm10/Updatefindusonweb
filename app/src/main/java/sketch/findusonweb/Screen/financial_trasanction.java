@@ -44,7 +44,7 @@ public class financial_trasanction extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_financial_trasanction);
         listing=findViewById(R.id.financial_trasanction_listing);
-        back_img=findViewById(R.id.img_back);
+        back_img=findViewById(R.id.back_img);
         globalClass = (GlobalClass) getApplicationContext();
         prefrence = new Shared_Preference(financial_trasanction.this);
         prefrence.loadPrefrence();
@@ -104,7 +104,7 @@ public class financial_trasanction extends AppCompatActivity {
                             JsonObject images1 = data.get(i).getAsJsonObject();
 
                             String date = images1.get("date").toString().replaceAll("\"", "");
-                            String transaction = images1.get("status").toString().replaceAll("\"", "");
+                            String transaction = images1.get("transaction").toString().replaceAll("\"", "");
                             String type = images1.get("type").toString().replaceAll("\"", "");
                             String paymentmethod = images1.get("paymentmethod").toString().replaceAll("\"", "");
                             String amount = images1.get("amount").toString().replaceAll("\"", "");

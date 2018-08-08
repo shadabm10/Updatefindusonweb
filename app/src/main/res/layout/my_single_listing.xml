@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Screen.HomeScreen">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/grey_dashboard"
+
+        >
+        <TextView
+            android:id="@+id/toolbar_drawer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/listview_32"
+            android:padding="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="start"
+            android:textColor="@color/white"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentStart="true"/>
+        <RelativeLayout
+            android:id="@+id/rl_cart_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp">
+            <TextView
+                android:id="@+id/profile_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+
+                android:textColor="@color/black"
+                android:contentDescription="@string/app_name"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_view"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ll_manage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            >
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@drawable/button_green_dashboard"
+               android:layout_weight="1"
+               android:layout_marginRight="5dp"
+
+               >
+               <ImageView
+                   android:id="@+id/img_manage1"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@mipmap/manage_xxxhdpi"
+                   android:padding="5dp"/>
+               <TextView
+                   android:layout_toRightOf="@+id/img_manage1"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerVertical="true"
+                   android:text="mldsnfkdnf"
+                   android:textColor="@color/white"
+                   android:textSize="8dp"/>
+
+           </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_yellow_dashboard"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                >
+                <ImageView
+                    android:id="@+id/img_manage2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/quick_statistics_xxxhdpi"
+                    android:padding="5dp" android:contentDescription="TODO"/>
+                <TextView
+                    android:layout_toRightOf="@+id/img_manage2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_centerVertical="true"
+                    android:textSize="8dp"
+                    android:text="mldsnfkdnfjfd"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_grey_dashboard"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+                <ImageView
+                    android:id="@+id/img_manage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ico_view"
+                    android:padding="5dp"/>
+                <TextView
+                    android:layout_toRightOf="@+id/img_manage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="8dp"
+                    android:textColor="@color/white"
+                    android:text="mldsnfkdnfjfdfd"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_progress_bar"
+        android:layout_below="@+id/rl_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            android:background="@drawable/blue_bg_tv"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@+id/rl_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="-10dp">
+    <TextView
+        android:id="@+id/progress_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="8dp"
+        android:text="jsdbfhjbsddhsfhsd"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

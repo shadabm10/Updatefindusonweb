@@ -5,7 +5,9 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
@@ -14,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,9 +25,15 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.bvapp.arcmenulibrary.ArcMenu;
+import com.bvapp.arcmenulibrary.widget.FloatingActionButton;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import com.luseen.spacenavigation.SpaceItem;
+import com.luseen.spacenavigation.SpaceNavigationView;
+import com.luseen.spacenavigation.SpaceOnClickListener;
+import com.luseen.spacenavigation.SpaceOnLongClickListener;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -32,6 +41,9 @@ import java.util.Map;
 import es.dmoral.toasty.Toasty;
 import sketch.findusonweb.Constants.AppConfig;
 import sketch.findusonweb.Controller.GlobalClass;
+import sketch.findusonweb.MainActivity;
+
+
 import sketch.findusonweb.R;
 import sketch.findusonweb.Utils.Shared_Preference;
 
@@ -41,25 +53,40 @@ import sketch.findusonweb.Utils.Shared_Preference;
 
 public class HomeScreen  extends AppCompatActivity {
     LinearLayout refer_friend_layout,get_quote_layout;
-    String TAG = "login";
+    String TAG = "Home Screen";
     ImageView dialog_cut,profile_img,toolbar_drawer;
     GlobalClass globalClass;
     ProgressDialog pd;
-
+    RelativeLayout rl_opacity;
     EditText search_by_code,search_by_business,search_by_product;
     public static final String PREFS_NAME = "MyPrefsFile";
+    private SpaceNavigationView spaceNavigationView;
+    private static final int[] ITEM_DRAWABLES = { R.mipmap.browse_job,
+            R.mipmap.ico_grid, R.mipmap.marker_location, R.mipmap.ico_browese_deal,
+            R.mipmap.ioc_cube};
 
+    private static final String[] STR = {"Browse Job","Browse Category","Browse Location","Browse Deal","Browse Product"};
     Button search_button;
     Shared_Preference prefrence;
     Dialog dialog;
     TextView save,submit,tv_browse;
     LinearLayout post_job_layout;
+    final int itemCount = ITEM_DRAWABLES.length;
+
     EditText firstname_dialog,lastname_dialog,email_dialog,business_name,phone_dialog,campaign_id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_screen);
+        ArcMenu arcMenu =  findViewById(R.id.arcMenu);
+      //  arcMenu.attachToRecyclerView(recyclerView);
+        rl_opacity=findViewById(R.id.rl_opacity);
+
         tv_browse=findViewById(R.id.tv_browse);
+        spaceNavigationView =  findViewById(R.id.space);
+
+        // setUpRecyclerView();
+
         globalClass = (GlobalClass) getApplicationContext();
         prefrence = new Shared_Preference(HomeScreen.this);
         prefrence.loadPrefrence();
@@ -80,6 +107,16 @@ public class HomeScreen  extends AppCompatActivity {
         profile_img=findViewById(R.id.profile_img);
         toolbar_drawer=findViewById(R.id.toolbar_drawer);
 
+
+        search_by_code=findViewById(R.id.search_by_code);
+        search_by_business=findViewById(R.id.search_by_business);
+        search_by_product=findViewById(R.id.search_by_product);
+        get_quote_layout=findViewById(R.id.get_quote_layout);
+
+        search_button=findViewById(R.id.search_button);
+        post_job_layout=findViewById(R.id.post_job_layout);
+
+
         refer_friend_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,13 +131,8 @@ public class HomeScreen  extends AppCompatActivity {
                 }
             }
         });
-        search_by_code=findViewById(R.id.search_by_code);
-        search_by_business=findViewById(R.id.search_by_business);
-        search_by_product=findViewById(R.id.search_by_product);
-        get_quote_layout=findViewById(R.id.get_quote_layout);
 
-        search_button=findViewById(R.id.search_button);
-        post_job_layout=findViewById(R.id.post_job_layout);
+
         search_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -190,6 +222,98 @@ public class HomeScreen  extends AppCompatActivity {
                 }
             }
         });
+
+
+
+        arcMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("qwerty", "Shrink ");
+                if(rl_opacity.getVisibility()== View.VISIBLE){
+                    rl_opacity.setVisibility(View.GONE);
+                }else {
+                    rl_opacity.setVisibility(View.VISIBLE);
+                }
+
+            }
+        });
+        arcMenu.setMinRadius(130);  //This method will change child radius programmatically
+
+
+        final int itemCount = ITEM_DRAWABLES.length;
+        for (int i = 0; i < itemCount; i++) {
+
+            FloatingActionButton item = new FloatingActionButton(this);  // Use internal FAB as child
+            // ********* import com.bvapp.arcmenulibrary.widget.FloatingActionButton; *********
+
+            item.setSize(FloatingActionButton.SIZE_MINI); // set initial size for child, it will create fab first
+            item.setIcon(ITEM_DRAWABLES[i]); // It will set fab icon from your resources which related to 'ITEM_DRAWABLES'
+            item.setBackgroundColor(getResources().getColor(R.color.white)); // it will set fab child's color
+            arcMenu.setChildSize(item.getIntrinsicHeight()); // set absolout child size for menu
+
+            final int position = i;
+
+            arcMenu.addItem(item, STR[i], new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //You can access child click in here
+                    rl_opacity.setVisibility(View.VISIBLE);
+                }
+            });
+
+/*
+            item.setOnShrinkExpandClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Log.d("qwerty", "Shrink ");
+                }
+            });
+*/
+        }
+        arcMenu.setAnim(300,300,ArcMenu.ANIM_MIDDLE_TO_RIGHT,ArcMenu.ANIM_MIDDLE_TO_RIGHT,
+                ArcMenu.ANIM_INTERPOLATOR_ACCELERATE_DECLERATE,ArcMenu.ANIM_INTERPOLATOR_ACCELERATE_DECLERATE);
+
+        spaceNavigationView.initWithSaveInstanceState(savedInstanceState);
+        spaceNavigationView.addSpaceItem(new SpaceItem("HOME", R.mipmap.home_mdpi_grey));
+        spaceNavigationView.addSpaceItem(new SpaceItem("MESSAGE", R.mipmap.message_mdpi_grey));
+        spaceNavigationView.addSpaceItem(new SpaceItem("ADD PRODUCT", R.mipmap.add_product_grey_mdpi));
+        spaceNavigationView.addSpaceItem(new SpaceItem("MORE", R.mipmap.more_mdpi_grey));
+        spaceNavigationView.shouldShowFullBadgeText(true);
+        spaceNavigationView.setCentreButtonIconColorFilterEnabled(false);
+        spaceNavigationView.showIconOnly();
+
+        spaceNavigationView.setSpaceOnClickListener(new SpaceOnClickListener() {
+            @Override
+            public void onCentreButtonClick() {
+                Log.d("onCentreButtonClick ", "onCentreButtonClick");
+                spaceNavigationView.shouldShowFullBadgeText(true);
+            }
+
+            @Override
+            public void onItemClick(int itemIndex, String itemName) {
+                Log.d("onItemClick ", "" + itemIndex + " " + itemName);
+                spaceNavigationView.setActiveSpaceItemColor(ContextCompat.getColor(HomeScreen.this,R.color.black));            }
+
+            @Override
+            public void onItemReselected(int itemIndex, String itemName) {
+                Log.d("onItemReselected ", "" + itemIndex + " " + itemName);
+            }
+        });
+
+        spaceNavigationView.setSpaceOnLongClickListener(new SpaceOnLongClickListener() {
+            @Override
+            public void onCentreButtonLongClick() {
+//                Toast.makeText(MainActivity.this, "onCentreButtonLongClick", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(HomeScreen.this, HomeScreen.class);
+                startActivity(intent);
+            }
+
+            @Override
+            public void onItemLongClick(int itemIndex, String itemName) {
+                Toast.makeText(HomeScreen.this, itemIndex + " " + itemName, Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
     }
     public void openDialog1() {

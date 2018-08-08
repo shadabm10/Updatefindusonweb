@@ -30,6 +30,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    implementation 'com.mikhaellopez:circularprogressbar:2.0.0'
 
     implementation 'com.makeramen:roundedimageview:2.2.1'
     implementation 'com.github.GrenderG:Toasty:1.2.8'
@@ -39,6 +40,7 @@ dependencies {
 
     implementation 'com.google.android.gms:play-services-auth:12.0.1'
     implementation 'com.android.support:multidex:1.0.0'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
 
     implementation 'com.google.code.gson:gson:2.7'
     implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
@@ -48,7 +50,9 @@ dependencies {
     implementation 'com.commonsware.cwac:merge:1.1.2'
     implementation group: 'com.itextpdf', name: 'itextpdf', version: '5.0.6'
     implementation 'com.android.support:design:27.1.1'
-
+/*For Bottom navigation and Tab bar*/
+   implementation 'com.github.armcha:SpaceNavigationView:1.6.0'
+    implementation 'com.github.BrotherV:Floating-ArcMenu:1.1.0.2'
 
     implementation 'com.mcxiaoke.volley:library-aar:1.0.0'
     implementation files('libs/jar_files.zip')
